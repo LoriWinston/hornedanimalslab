@@ -1,25 +1,60 @@
-import logo from './logo.svg';
+import React from 'react';
+import data from './Data';
 import './App.css';
+import ImageList from './components/ImageList';
 
-function App() {
+
+export default class App extends React.Component {
+state={
+  keyword: ''
+}
+
+handleNameChange = (e) => {
+  this.setState({ 
+    title: 
+    e.target.value 
+   });
+}
+
+
+render(){
+  const filteredImages=data.filter((booger) => {
+  if (!this.state.keyword) return true; 
+    
+          if (booger.keyword === this.state.keyword) return true; 
+    
+         return false;
+  })
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <form>
+          <select
+              value={this.state.keyword}
+              onChange={(e) => {
+                this.setState({
+                  keyword: e.target.value
+                })
+                console.log(this.state)
+              }}
+>
+          <option value='rhino'>rhino</option>
+              <option value='narwhal'>narwhal</option>
+          </select>
+          <button>Submit</button>
+        </form>
+      < ImageList ImageItemProp={ filteredImages }/>
+      
       </header>
     </div>
-  );
+    ); }
 }
 
-export default App;
+
+
+
+
+
+
