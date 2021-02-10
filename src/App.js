@@ -30,6 +30,7 @@ render(){
   return (
     <div className="App">
       <header className="App-header">
+      </header>
         <form>
           <select
               value={this.state.keyword}
@@ -47,7 +48,7 @@ render(){
         </form>
       < ImageList ImageItemProp={ filteredImages }/>
       
-      </header>
+      
     </div>
     ); }
 }
