@@ -4,7 +4,7 @@ import ImageItem from './ImageItem';
 export default class ImageList extends React.Component {
     render() {
         const imageMapVariable = 
-            this.props.ImageItemProp.map(
+            this.props.filteredKeywords.map(
             booger => < ImageItem ImageItemProp={ booger } />
             
             );
