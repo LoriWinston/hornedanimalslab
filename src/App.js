@@ -72,7 +72,44 @@ render(){
 
 
 
+/* 
+handleKeywordChange = (e) => {
+  this.setState({
+    keyword: e.target.value
+  })
+}
+
+handleHornsChange = (e) => {
+  this.setState({
+    horns: e.target.value
+  })
+}
 
 
+
+
+return {
+  <>
+  <HornedAnimalsList
+  filteredKeywords={filteredKeywords}
+  />
+  Keyword
+  <Dropdown
+  currentValue={this.state.keyword}
+  handleChange={this.handleKeywordChange
+  options=['narwhal', 'rhino', 'unicorn', 'unilego', 'triceratops', 'markhor', 'chameleon', 'lizard', 'dragon']
+  />
+  }
+
+
+  Horns
+  <Dropdown
+  currentValue={this.state.horns}
+  handleChange={this.handleHornsChange
+  options=['1', '2', '3', '100']
+  />
+  </>
+}
+}
 
 
